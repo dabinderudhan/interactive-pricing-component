@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-neutral-main-bg;
+}
+
+main {
+  position: relative;
+}
+
+.bg-imgs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../src/images/pattern-circles.svg"),
+    url("../../src/images/bg-pattern.svg");
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 60px, center top;
+  background-size: auto 20%, 100% 50%;
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 544px;
+    padding-inline: 0;
+  }
+}

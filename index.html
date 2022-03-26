@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- external css -->
+    <link rel="stylesheet" href="./dist/css/main.css" />
+
+    <!-- external js -->
+    <script defer src="./src/js/index.js"></script>
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <main>
+      <div class="bg-imgs"></div>
+      <div class="container">
+        <header class="hero flex flex-col">
+          <h1 class="hero-heading">Simple, traffic-based pricing</h1>
+          <p class="hero-text">
+            Sign-up for our 30-day trial. <br />No credit card required.
+          </p>
+        </header>
+
+        <article class="card flex flex-col">
+          <header class="card-header flex flex-col">
+            <h2 class="card-header--pageviews">
+              <span class="card-header--pageviews_num"></span> Pageviews
+            </h2>
+            <p class="card-header--price flex"><span>$ </span>/ month</p>
+            <div class="card-header--slider">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="50%"
+                step="25"
+                class="card-header--slider_input"
+              />
+              <div class="card-header--slider_rangethumb"></div>
+              <div class="card-header--slider_progressbar"></div>
+            </div>
+          </header>
+
+          <section class="card-billing flex">
+            <p class="card-billing--monthly">Monthly Billing</p>
+            <label class="card-billing--toggle switch">
+              <input id="mycheck" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <p class="card-billing--yearly">
+              Yearly Billing
+              <span class="card-billing--yearly_discount"
+                >-25% <span>discount</span></span
+              >
+            </p>
+          </section>
+          <section class="card-features flex flex-col">
+            <ul class="card-features--list flex flex-col">
+              <li class="card-features--list_item flex">
+                <img
+                  src="./src/images/icon-check.svg"
+                  alt="check icon"
+                  aria-hidden="true"
+                />Unlimited websites
+              </li>
+              <li class="card-features--list_item flex">
+                <img
+                  src="./src/images/icon-check.svg"
+                  alt="check icon"
+                  aria-hidden="true"
+                />100% data ownership
+              </li>
+              <li class="card-features--list_item flex">
+                <img
+                  src="./src/images/icon-check.svg"
+                  alt="check icon"
+                  aria-hidden="true"
+                />Email reports
+              </li>
+            </ul>
+            <button class="card-features--btn btn">Start my trial</button>
+          </section>
+        </article>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </body>
+</html>
